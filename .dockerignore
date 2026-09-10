@@ -1,0 +1,17 @@
+.git
+.github
+node_modules
+frontend/dist
+backend/.env
+backend/.chroma
+backend/tests
+backend/.pytest_cache
+backend/.ruff_cache
+venv
+.venv
+specs
+docs
+*.log
+__pycache__
+.pytest_cache
+.ruff_cache

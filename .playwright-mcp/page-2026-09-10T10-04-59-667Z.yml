@@ -1,0 +1,46 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [aria-hidden] [ref=e6]: R
+      - generic [ref=e7]:
+        - generic [ref=e8]: Incident intelligence platform
+        - heading "RCA Buddy" [level=1] [ref=e9]
+        - paragraph [ref=e10]: AI-Powered CI/CD Incident Root Cause Analysis
+    - generic [ref=e13]:
+      - text: System status
+      - strong [ref=e14]: Unknown
+  - main [ref=e15]:
+    - region [ref=e16]:
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: Analysis workspace
+        - heading "Investigate a deployment failure" [level=2] [ref=e19]
+        - paragraph [ref=e20]: Turn noisy CI/CD output into a grounded explanation your team can act on.
+      - generic [ref=e21]:
+        - generic [aria-hidden] [ref=e22]: i
+        - generic [ref=e23]: Decision support only — RCA Buddy does not automatically modify production systems.
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]:
+            - paragraph [ref=e28]: Step 01
+            - heading "Incident analysis" [level=2] [ref=e29]
+          - generic [ref=e30]: Required
+        - form "Analyze a CI/CD failure" [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Failed CI/CD log
+            - paragraph [ref=e34]: Include the failing step, exception, and stack trace when available.
+            - textbox "Failed CI/CD log" [ref=e35]:
+              - /placeholder: "Deploy production / build #1842\n\nERROR: Step 'Build image' failed\nDockerfile:22: RUN npm run build\nerror: Cannot find module '@acme/config'"
+          - generic [ref=e36]:
+            - generic [ref=e37]: Run source URL (optional)
+            - textbox "Run source URL (optional)" [ref=e38]:
+              - /placeholder: https://github.com/org/repo/actions/runs/...
+          - button "Analyze incident" [ref=e40] [cursor=pointer]:
+            - text: Analyze incident
+            - generic [aria-hidden] [ref=e41]: →
+      - region "Analysis results" [ref=e42]:
+        - generic [aria-hidden] [ref=e43]: +
+        - paragraph [ref=e44]: Step 02
+        - heading "Analysis results" [level=2] [ref=e45]
+        - paragraph [ref=e46]: Paste a failed CI/CD log to begin your root cause analysis.
+        - generic [ref=e48]: Results will include confidence, evidence, and recommended next steps.
