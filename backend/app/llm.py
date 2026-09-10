@@ -7,7 +7,8 @@ from .schemas import RcaReport
 SYSTEM_PROMPT = """You are RCA Buddy, a CI/CD incident analyst.
 Use the SIMILAR INCIDENTS below as grounding context if relevant.
 Analyze the ERROR SIGNATURE and produce a structured RCA:
-Return ONLY valid JSON with exactly these fields: root_cause, component, confidence, suggested_fix. Do not use markdown or code fences.
+Return ONLY valid JSON with exactly these fields: root_cause, component, confidence, \
+suggested_fix. Do not use markdown or code fences.
 root cause, affected component, confidence (0-1), suggested fix.
 If nothing in the context or your knowledge supports a confident answer,
 set confidence below 0.5 and say so plainly rather than guessing.
@@ -49,4 +50,4 @@ class GeminiClient:
             if status == 429:
                 raise RateLimitedError(getattr(exc, "retry_after", None)) from exc
             print(f"LLM ERROR: {type(exc).__name__}: {exc}")
-        raise ProviderError() from exc
+            raise ProviderError() from exc
